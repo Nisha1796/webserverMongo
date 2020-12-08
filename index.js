@@ -172,23 +172,23 @@ server.get('/patients/:id/records', function (req, res, next) {
 server.post('/patients/:id/records', function (req, res, next){
 
     if (req.params.bloodgroup == undefined) {
-        return next(new errors.BadRequestError('blood group must be supplied'))
+        return next(new errors.InvalidArgumentError('blood group must be supplied'))
     }
     
     if (req.params.date_of_birth == undefined) {
-        return next(new errors.BadRequestError('date_of_birth must be supplied'))
+        return next(new errors.InvalidArgumentError('date_of_birth must be supplied'))
     }
 
     if (req.params.heartrate == undefined) {
-        return next(new errors.BadRequestError('heartrate must be supplied'))
+        return next(new errors.InvalidArgumentError('heartrate must be supplied'))
     }
 
     if (req.params.bloodpressure == undefined) {
-        return next(new errors.BadRequestError('bloodpressure must be supplied'))
+        return next(new errors.InvalidArgumentError('bloodpressure must be supplied'))
     }
 
     if (req.params.nurse == undefined) {
-        return next(new errors.BadRequestError('nurse must be supplied'))
+        return next(new errors.InvalidArgumentError('nurse must be supplied'))
     }
 
 
